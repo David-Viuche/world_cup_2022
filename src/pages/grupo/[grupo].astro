@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import { GroupTable } from "../../components/GroupTable";
+export function getStaticPaths() {
+  return [
+    {params: {grupo: 'A'}},
+    {params: {grupo: 'B'}},
+    {params: {grupo: 'C'}},
+    {params: {grupo: 'D'}},
+    {params: {grupo: 'E'}},
+    {params: {grupo: 'F'}},
+    {params: {grupo: 'G'}},
+    {params: {grupo: 'H'}},
+  ];
+}
+
+const { grupo } = Astro.params;
+---
+
+<Layout title="Mundial 2022">
+	<Header title={`Tabla de Posiciones - Grupo ${grupo}`} />
+	<GroupTable groupCode={grupo} client:load/>
+</Layout>
