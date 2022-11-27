@@ -1,4 +1,4 @@
-export const Team = ({ nombre, bandera, abrev }) => {
+export const Team = ({ nombre, bandera }) => {
   return (
     <div className='flex justify-center items-center flex-col'>
       <img className='w-28 h-16' src={bandera} alt='' />
