@@ -29,7 +29,7 @@ export const TablePositions = ({ equipos }) => {
                     <tr key={id} className='border-b-2 border-black'>
                       <td>{posicion}</td>
                       <td>
-                        <Team nombre={abrev} bandera={bandera} abrev={abrev} />
+                        <Team nombre={abrev} bandera={bandera} abrev={abrev} clas />
                       </td>
                       <td>{puntos}</td>
                       <td>{victorias}</td>
