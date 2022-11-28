@@ -1,7 +1,8 @@
+import { Team } from './Team'
 
 export const TablePositions = ({ equipos }) => {
   return (
-    <div className='w-full h-fit flex flex-col justify-center items-center mt-10'>
+    <div className='w-full h-fit flex flex-col justify-center items-center mt-2'>
 
       {
           console.log({ equipos })
@@ -28,10 +29,7 @@ export const TablePositions = ({ equipos }) => {
                     <tr key={id} className='border-b-2 border-black'>
                       <td>{posicion}</td>
                       <td>
-                        <div className='flex justify-center items-center flex-col'>
-                          <img className='w-20 h-10 pb-1 xs:w-28 xs:h-16' src={bandera} alt='' />
-                          <h2>{abrev}</h2>
-                        </div>
+                        <Team nombre={abrev} bandera={bandera} abrev={abrev} />
                       </td>
                       <td>{puntos}</td>
                       <td>{victorias}</td>
