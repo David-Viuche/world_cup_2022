@@ -5,7 +5,7 @@ export const Groups = () => {
   const { groups, isLoading } = useFetchGroups()
 
   return (
-    <div className='borde px-10 pb-10 w-full flex flex-wrap items-center justify-center lg:max-w-screen-md 2xl:max-w-screen-2xl'>
+    <div className='borde px-10 pb-10 w-full flex flex-wrap items-center justify-center lg:max-w-screen-lg 2xl:max-w-screen-2xl'>
 
       {
         isLoading && <h2>Cargando...</h2>
