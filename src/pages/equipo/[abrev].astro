@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import { Matches } from "../../components/Matches";
+
+export function getStaticPaths() {
+  return [
+    {params: {abrev: 'QAT'}},
+    {params: {abrev: 'ECU'}},
+    {params: {abrev: 'POL'}},
+    {params: {abrev: 'FRA'}},
+    {params: {abrev: 'ENG'}},
+    {params: {abrev: 'IRN'}},
+    {params: {abrev: 'BRA'}},
+    {params: {abrev: 'URU'}},
+    {params: {abrev: 'ESP'}},
+    {params: {abrev: 'SEN'}},
+    {params: {abrev: 'NED'}},
+    {params: {abrev: 'ARG'}},
+    {params: {abrev: 'USA'}},
+    {params: {abrev: 'WAL'}},
+    {params: {abrev: 'MAR'}},
+    {params: {abrev: 'KSA'}},
+    {params: {abrev: 'GER'}},
+    {params: {abrev: 'DEN'}},
+    {params: {abrev: 'TUN'}},
+    {params: {abrev: 'MEX'}},
+    {params: {abrev: 'AUS'}},
+    {params: {abrev: 'CAN'}},
+    {params: {abrev: 'CRO'}},
+    {params: {abrev: 'JPN'}},
+    {params: {abrev: 'CRC'}},
+    {params: {abrev: 'BEL'}},
+    {params: {abrev: 'SUI'}},
+    {params: {abrev: 'CMR'}},
+    {params: {abrev: 'KOR'}},
+    {params: {abrev: 'POR'}},
+    {params: {abrev: 'GHA'}},
+    {params: {abrev: 'SRB'}}
+  ];
+}
+
+const { abrev } = Astro.params;
+---
+
+<Layout title="Mundial 2022">
+	<Header title={`Partidos - ${abrev}`} />
+    <Matches abrev={abrev} client:load/>
+</Layout>

@@ -6,6 +6,7 @@ export const GroupTable = ({ groupCode }) => {
 
   return (
     <>
+      <a href='/world_cup_2022/' className='p-4 m-4 rounded bg-slate-200 shadow-md hover:bg-white'>Grupos</a>
       {
         isLoading && <h2>Cargando...</h2>
       }
