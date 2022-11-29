@@ -1,4 +1,5 @@
 import { getFlag } from './getFlags'
+import { getNameTeam } from './getNameTeam'
 
 export const getMatches = async (abrev) => {
   const url = `https://copa22.medeiro.tech/teams/${abrev}/matches`
@@ -15,14 +16,14 @@ export const getMatches = async (abrev) => {
     equipoLocal: {
       abrev: element.homeTeam.country,
       goles: element.homeTeam.goals,
-      nombre: element.homeTeam.name,
+      nombre: getNameTeam(element.homeTeam.name),
       penaltis: element.homeTeam.penalties,
       bandera: getFlag(element.homeTeam.country)
     },
     equipoVisitante: {
       abrev: element.awayTeam.country,
       goles: element.awayTeam.goals,
-      nombre: element.awayTeam.name,
+      nombre: getNameTeam(element.awayTeam.name),
       penaltis: element.awayTeam.penalties,
       bandera: getFlag(element.awayTeam.country)
     },

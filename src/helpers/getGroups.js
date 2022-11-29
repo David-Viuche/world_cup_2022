@@ -1,4 +1,5 @@
 import { getFlag } from './getFlags'
+import { getNameTeam } from './getNameTeam'
 
 export const getGroups = async (code) => {
   const url = 'https://copa22.medeiro.tech/groups'
@@ -14,7 +15,7 @@ export const getGroups = async (code) => {
 
       id: team.id,
       abrev: team.country,
-      nombre: team.alternateName,
+      nombre: getNameTeam(team.alternateName),
       posicion: team.position,
       bandera: getFlag(team.country),
       victorias: team.wins,
