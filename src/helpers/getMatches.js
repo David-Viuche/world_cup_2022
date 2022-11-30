@@ -2,7 +2,11 @@ import { getFlag } from './getFlags'
 import { getNameTeam } from './getNameTeam'
 
 export const getMatches = async (abrev) => {
-  const url = `https://copa22.medeiro.tech/teams/${abrev}/matches`
+  let url = `https://copa22.medeiro.tech/teams/${abrev}/matches`
+
+  if (!abrev) {
+    url = 'https://copa22.medeiro.tech/matches/today'
+  }
 
   const resp = await fetch(url)
 

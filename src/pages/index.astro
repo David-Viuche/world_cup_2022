@@ -2,9 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import { Groups } from "../components/Groups";
 import Header from "../components/Header.astro";
+import { Matches } from "../components/Matches";
 ---
 
 <Layout title="Mundial 2022">
+	<Header title="Partidos Hoy" />
+	<Matches abrev={null} btns={null} client:load/>
 	<Header title="Grupos" />
 	<Groups client:load/>
 </Layout>

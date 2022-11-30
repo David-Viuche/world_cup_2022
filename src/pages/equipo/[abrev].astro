@@ -45,5 +45,5 @@ const { abrev } = Astro.params;
 
 <Layout title="Mundial 2022">
 	<Header title={`Partidos - ${abrev}`} />
-    <Matches abrev={abrev} client:load/>
+    <Matches abrev={abrev} btns client:load/>
 </Layout>
