@@ -4,10 +4,6 @@ export const TablePositions = ({ equipos }) => {
   return (
     <div className='w-full h-fit flex flex-col justify-center items-center mt-2'>
 
-      {
-          console.log({ equipos })
-      }
-
       <table className='text-center m-5 border-spacing-2 border-separate lg:border-spacing-5'>
         <thead>
           <tr>
