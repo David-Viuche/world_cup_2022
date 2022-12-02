@@ -1,15 +1,20 @@
+import { MatchStatus } from './MatchStatus'
 import { Team } from './Team'
 
-export const Match = ({ equipoLocal, equipoVisitante, fecha, estado }) => {
+export const Match = ({ equipoLocal, equipoVisitante, fecha, estado, fase }) => {
   return (
     <div className='flex flex-col items-center shadow-md p-4'>
+      <h1 className='m-3 font-semibold'>{fase}</h1>
+      <div className='flex'>
+        <Team nombre={equipoLocal.nombre} bandera={equipoLocal.bandera} abrev={equipoLocal.abrev} />
+        <div className='m-2  flex items-center sm:m-5'>
+          <h1 className='text-lg font-bold'>{equipoLocal.goles} - {equipoVisitante.goles}</h1>
+        </div>
+        <Team nombre={equipoVisitante.nombre} bandera={equipoVisitante.bandera} abrev={equipoVisitante.abrev} />
+      </div>
       <div className='flex items-center'>
         <h2 className='m-2'>{new Date(fecha).toLocaleString()}</h2>
-        <h2>{(estado === 'completed') ? 'Finalizado' : 'Pendiente'}</h2>
-      </div>
-      <div className='grid grid-cols-2 gap-10'>
-        <Team nombre={equipoLocal.nombre} bandera={equipoLocal.bandera} abrev={equipoLocal.abrev} goles={equipoLocal.goles} />
-        <Team nombre={equipoVisitante.nombre} bandera={equipoVisitante.bandera} abrev={equipoVisitante.abrev} goles={equipoLocal.goles} />
+        <MatchStatus status={estado} />
       </div>
     </div>
   )

@@ -1,6 +1,14 @@
 import { getFlag } from './getFlags'
 import { getNameTeam } from './getNameTeam'
 
+const getFase = (fase) => {
+  const fases = {
+    'First stage': 'Fase de grupos',
+    'Round of 16': 'Octavos de final'
+  }
+  return fases[fase]
+}
+
 export const getMatches = async (abrev) => {
   let url = `https://copa22.medeiro.tech/teams/${abrev}/matches`
 
@@ -16,7 +24,7 @@ export const getMatches = async (abrev) => {
     id: element.id,
     localizacion: element.location,
     estado: element.status,
-    fase: (element.stageName === 'First stage') && 'Fase de grupos',
+    fase: getFase(element.stageName),
     equipoLocal: {
       abrev: element.homeTeam.country,
       goles: element.homeTeam.goals,
