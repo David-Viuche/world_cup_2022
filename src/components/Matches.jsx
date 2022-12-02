@@ -1,7 +1,7 @@
 import { getGroupByAbrev } from '../helpers/getGroup'
 import { useFetchMatches } from '../hooks/useFetchMatches'
 import { Match } from './Match'
-export const Matches = ({ abrev, btns }) => {
+export const Matches = ({ abrev, btns, fase }) => {
   const { matches, isLoading } = useFetchMatches(abrev)
   return (
     <div className={`${(btns) && 'p-10 '} w-full flex flex-col flex-wrap items-center justify-center lg:max-w-screen-md 2xl:max-w-screen-2xl gap-4 p-10`}>
@@ -19,7 +19,10 @@ export const Matches = ({ abrev, btns }) => {
       }
 
       {
-        matches.map(match => (<Match key={match.id} {...match} />))
+        ((fase)
+          ? matches.filter(match => match.fase === fase)
+          : matches)
+          .map(match => (<Match key={match.id} {...match} />))
       }
 
     </div>
