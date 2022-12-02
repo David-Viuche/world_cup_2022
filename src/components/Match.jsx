@@ -8,7 +8,7 @@ export const Match = ({ equipoLocal, equipoVisitante, fecha, estado, fase }) => 
       <div className='flex'>
         <Team nombre={equipoLocal.nombre} bandera={equipoLocal.bandera} abrev={equipoLocal.abrev} />
         <div className='m-2  flex items-center sm:m-5'>
-          <h1 className='text-lg font-bold'>{(estado !== 'scheduled') ? `${equipoLocal.goles} - ${equipoVisitante.goles}` : ''}</h1>
+          <h1 className='text-lg font-bold'>{(estado !== 'scheduled') ? `${equipoLocal.goles} - ${equipoVisitante.goles}` : 'vs'}</h1>
         </div>
         <Team nombre={equipoVisitante.nombre} bandera={equipoVisitante.bandera} abrev={equipoVisitante.abrev} />
       </div>
