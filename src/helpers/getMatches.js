@@ -24,7 +24,12 @@ export const getMatches = async (abrev) => {
     url = 'https://copa22.medeiro.tech/matches'
   }
 
-  const resp = await fetch(url)
+  const resp = await fetch(url, {
+    headers: new Headers({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    })
+  })
 
   const data = await resp.json()
 
