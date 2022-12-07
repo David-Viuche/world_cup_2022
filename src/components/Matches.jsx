@@ -19,6 +19,10 @@ export const Matches = ({ abrev, btns, fase }) => {
       }
 
       {
+        !isLoading && matches.length === 0 && <h2>No hay partidos programados para hoy</h2>
+      }
+
+      {
         ((fase)
           ? matches.filter(match => match.fase === fase)
           : matches)
