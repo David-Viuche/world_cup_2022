@@ -2,7 +2,7 @@
 
 ## Página principal
 
-![image](https://user-images.githubusercontent.com/39018284/204692376-bbb5c7ac-e436-4732-8550-cb48c33f222a.png)
+![image](https://user-images.githubusercontent.com/39018284/206826977-dda9715d-52fd-471d-91f3-1c4a832d67d0.png)
 
 ## Grupos
 
@@ -10,7 +10,7 @@
 
 ## Click sobre cualquier bandera para ver los partidos por equipo
 
-![image](https://user-images.githubusercontent.com/39018284/204692585-99350d85-e71e-441f-8f6f-0f44725dcbac.png)
+![image](https://user-images.githubusercontent.com/39018284/206826960-210eb669-a767-4294-b2bf-7e829a665500.png)
 
 ## Correr el proyecto
 
