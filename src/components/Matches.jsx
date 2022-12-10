@@ -1,6 +1,8 @@
 import { getGroupByAbrev } from '../helpers/getGroup'
 import { useFetchMatches } from '../hooks/useFetchMatches'
 import { Match } from './Match'
+import { MatchLoader } from './MatchLoader'
+
 export const Matches = ({ abrev, btns, fase }) => {
   const { matches, isLoading } = useFetchMatches(abrev)
   return (
@@ -15,7 +17,7 @@ export const Matches = ({ abrev, btns, fase }) => {
       }
 
       {
-        isLoading && <h2>Cargando...</h2>
+        isLoading && <MatchLoader />
       }
 
       {
