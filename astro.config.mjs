@@ -9,6 +9,5 @@ import react from '@astrojs/react'
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site: 'https://david-viuche.github.io/',
-  base: '/world_cup_2022'
+  site: 'https://david-viuche.github.io/'
 })

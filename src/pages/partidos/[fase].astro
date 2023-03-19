@@ -23,13 +23,13 @@ const faseSend = getFase(fase)
 <Layout title="Mundial 2022">
 	<Header title={"Partidos - "+faseSend} />
     <div class='flex w-full justify-around flex-wrap gap-2 p-6 max-w-4xl'>
-        <a href='/world_cup_2022/' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Inicio</a>
-        <a href='/world_cup_2022/partidos/grupos' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Grupos</a>
-        <a href='/world_cup_2022/partidos/octavos' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Octavos</a>
-        <a href='/world_cup_2022/partidos/cuartos' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Cuartos</a>
-        <a href='/world_cup_2022/partidos/semi' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Semi</a>
-        <a href='/world_cup_2022/partidos/tercer' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Tercer</a>
-        <a href='/world_cup_2022/partidos/final' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Final</a>
+        <a href='/' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Inicio</a>
+        <a href='/partidos/grupos' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Grupos</a>
+        <a href='/partidos/octavos' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Octavos</a>
+        <a href='/partidos/cuartos' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Cuartos</a>
+        <a href='/partidos/semi' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Semi</a>
+        <a href='/partidos/tercer' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Tercer</a>
+        <a href='/partidos/final' class='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Final</a>
     </div>
     <div id="grupos">
         <Matches abrev='all' btns={null} fase={faseSend} client:load/>

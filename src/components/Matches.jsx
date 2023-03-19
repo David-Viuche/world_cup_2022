@@ -11,8 +11,8 @@ export const Matches = ({ abrev, btns, fase }) => {
       {
         btns &&
           <div className='flex w-full justify-around'>
-            <a href='/world_cup_2022/' className='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Inicio</a>
-            <a href={`/world_cup_2022/grupo/${getGroupByAbrev(abrev)}`} className='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Clasificación</a>
+            <a href='/' className='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Inicio</a>
+            <a href={`/grupo/${getGroupByAbrev(abrev)}`} className='p-4 rounded bg-slate-200 shadow-md hover:bg-white'>Clasificación</a>
           </div>
       }
 
